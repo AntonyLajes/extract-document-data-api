@@ -27,4 +27,9 @@ class DocumentController {
         }
     }
 
+    @GetMapping("/extract-content")
+    fun extractText(): ResponseEntity<String> {
+        return "Olá, Mundo"
+    }
+
 }
