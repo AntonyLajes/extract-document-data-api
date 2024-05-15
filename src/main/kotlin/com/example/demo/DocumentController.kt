@@ -4,6 +4,7 @@ import org.apache.pdfbox.pdmodel.PDDocument
 import org.apache.pdfbox.text.PDFTextStripper
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
+import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.web.bind.annotation.RestController
@@ -29,7 +30,7 @@ class DocumentController {
 
     @GetMapping("/extract-content")
     fun extractText(): ResponseEntity<String> {
-        return "Olá, Mundo"
+        return ResponseEntity.ok("Olá, Mundo")
     }
 
 }
