@@ -13,7 +13,8 @@ class DocumentController {
 
     @PostMapping("/extract-content")
     @CrossOrigin(origins = ["http://localhost:8080"])
-    fun extractText(@RequestParam("document") file: MultipartFile): ResponseEntity<String> {
+    fun extractText(@RequestParam file: MultipartFile): ResponseEntity<String> {
+        println("Entrou")
         return try {
             val document = PDDocument.load(ByteArrayInputStream(file.bytes))
             val stripper = PDFTextStripper()
